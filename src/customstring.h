@@ -9,9 +9,9 @@
 struct String final
 {
 	static constexpr float GROWTH_FACTOR = 1.5f;
-	static constexpr int DEFAULT_CAPACITY = 16;
+	static constexpr size_t DEFAULT_CAPACITY = 16;
 
-	static_assert(GROWTH_FACTOR > 1, "Invalid string growth.");
+	static_assert(GROWTH_FACTOR > 1.0f, "Invalid string growth.");
 	static_assert(DEFAULT_CAPACITY > 0, "Invalid default string capacity.");
 
 public:
