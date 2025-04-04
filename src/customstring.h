@@ -25,6 +25,7 @@ public:
 
 	bool empty() const;
 	size_t size() const;
+	size_t capacity() const;
 
 	void clear();
 	void reserve(const size_t cap);

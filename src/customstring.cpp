@@ -44,6 +44,7 @@ String::String(const char* str)
 
 bool String::empty() const { return !count; }
 size_t String::size() const { return count; }
+size_t String::capacity() const { return current_capacity; }
 
 void String::clear()
 {
