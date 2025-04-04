@@ -16,7 +16,7 @@ struct String final
 
 public:
 	~String();
-	
+
 	String();
 	String(const size_t cap);
 	String(const String& str);
@@ -28,7 +28,7 @@ public:
 
 	void clear();
 	void reserve(const size_t cap);
-	
+
 	void push_back(const char ch);
 	String& append(const char ch);
 	String& append(const char* str);
