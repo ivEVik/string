@@ -8,6 +8,9 @@
 
 int main(int argc, char** argv)
 {
+	if(argc <= 1)
+		return 0;
+
 	std::vector<String> strings = std::vector<String>();
 
 	for(int t = 1; t < argc; ++t)
