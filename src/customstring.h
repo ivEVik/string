@@ -35,6 +35,12 @@ public:
 	String& append(const char* str);
 	String& append(const String& str);
 
+	char* begin();
+	const char* begin() const;
+
+	char* end();
+	const char* end() const;
+
 	char& operator[](const size_t pos);
 	const char& operator[](const size_t pos) const;
 
@@ -49,13 +55,13 @@ public:
 	friend String operator+(const String& str, const char ch);
 	friend String operator+(const String& str, const char* cstr);
 
-	friend std::ostream& operator<<(std::ostream& stream, const String& str);
-
 private:
 	size_t count = 0;
 	size_t current_capacity = 0;
 	char* chars = nullptr;
 };
+
+std::ostream& operator<<(std::ostream& stream, const String& str);
 
 bool compare_ignore_case(const String& a, const String& b);
 

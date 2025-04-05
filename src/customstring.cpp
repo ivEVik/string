@@ -100,6 +100,12 @@ String& String::append(const String& str)
 	return append(str.chars);
 }
 
+char* String::begin() { return chars; }
+const char* String::begin() const { return chars; }
+
+char* String::end() { return chars + count; }
+const char* String::end() const { return chars + count; }
+
 char& String::operator[](const size_t pos) { return chars[pos]; }
 const char& String::operator[](const size_t pos) const { return chars[pos]; }
 
@@ -142,8 +148,8 @@ String operator+(const String& str, const char* cstr) { return String(str).appen
 
 std::ostream& operator<<(std::ostream& stream, const String& str)
 {
-	for(size_t t = 0; t < str.count; ++t)
-		stream << str.chars[t];
+	for(const char ch : str)
+		stream << ch;
 	return stream;
 }
 
