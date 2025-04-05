@@ -97,7 +97,9 @@ String& String::append(const char* str)
 String& String::append(const String& str)
 {
 	reserve(count + str.count);
-	return append(str.chars);
+	for(const char ch : str)
+		push_back(ch);
+	return *this;
 }
 
 char* String::begin() { return chars; }
