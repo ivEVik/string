@@ -150,7 +150,7 @@ String operator+(const String& str, const char* cstr) { return String(str).appen
 
 std::ostream& operator<<(std::ostream& stream, const String& str)
 {
-	for(const char ch : str)
+	for(const auto& ch : str)
 		stream << ch;
 	return stream;
 }
